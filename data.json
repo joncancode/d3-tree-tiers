@@ -1,0 +1,19 @@
+{
+  "name": "grandfather",
+  "children": [
+    {
+      "name": "mom",
+      "children": [
+        { "name": "oldest kid" },
+        { "name": "middle kid" },
+        { "name": "youngest kid" }
+      ]
+    },
+    {
+      "name": "other guy",
+      "children": [
+        { "name": "older kid" }, 
+        { "name": "younger kid" }]
+    }
+  ]
+}

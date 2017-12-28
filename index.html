@@ -14,15 +14,26 @@
         let canvas = d3.select('body').append('svg')
             .attr('width', 500)
             .attr('height', 500)
+            .append('g')
+                .attr('transform', 'translate(50, 50)')
 
-        let diagonal = d3.svg.diagonal()
-            .source({x: 10, y: 10})
-            .target({x: 300, y: 300})
+        let tree = d3.layout.tree()
+            .size([400, 400])
 
-        canvas.append('path')
-            .attr('fill', 'none')
-            .attr('stroke', 'purple')
-            .attr('d', diagonal)
+        d3.json('data.json', function (data){
+
+            let nodes = tree.nodes(data)
+
+        })
+
+        // let diagonal = d3.svg.diagonal()
+        //     .source({x: 10, y: 10})
+        //     .target({x: 300, y: 300})
+
+        // canvas.append('path')
+        //     .attr('fill', 'none')
+        //     .attr('stroke', 'purple')
+        //     .attr('d', diagonal)
 
     </script>
 </body>
