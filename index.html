@@ -23,6 +23,18 @@
         d3.json('data.json', function (data){
 
             let nodes = tree.nodes(data)
+            let links = tree.links(nodes)
+
+            let node = canvas.selectAll('.node')
+                .data(nodes)
+                .enter()
+                .append('g')
+                    .attr('class', 'node')
+                    .attr('transform', function(d) {return `translate (${d.x}, ${d.y})`})
+
+                node.append('circle')
+                    .attr('r', 5)
+                    .attr('fill', 'orange')
 
         })
 
